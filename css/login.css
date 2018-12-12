@@ -1,0 +1,47 @@
+body{
+    margin:0px;
+    padding:0px;  
+}
+
+.title{
+    font-size: 1.8em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:30px 10px;
+    text-align: center;
+}
+
+.form{
+    text-align: center;
+}
+
+.btn{
+    line-height: 1.8em;
+    font-size: 1.4em;
+    padding: 5px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px 9.8%;
+    border: 1px solid #004D40;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 77, 64, 0.4);
+    display: block;
+    color: wheat;
+    background: #004D40;
+    min-width: 80%;
+    outline-color: #004D40;
+    cursor: pointer;
+}
+
+.field{
+    line-height: 1.8em;
+    font-size: 1.4em;
+    padding: 5px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px 9.8%;
+    border: 1px solid #004D40;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 77, 64, 0.4);
+    display: block;
+    color: inherit;
+    min-width: 80%;
+}
+

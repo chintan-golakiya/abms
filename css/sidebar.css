@@ -1,0 +1,77 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar{
+    display: inline;
+    min-width: 200px;
+    height: 100%;
+    
+}
+
+.maincontent{
+    display: inline;
+    width: 86%;
+}
+
+.menu{
+    padding : 10px 20px;
+    border-top: 1px solid #80CBC4;
+    border-radius: 5px;
+    border-bottom: 1px solid #80CBC4;
+    margin: 2px 0px;
+}
+
+.menu:hover{
+    color: #424242;
+    background: #80CBC4;
+}
+
+.activemenu{
+    color: #424242;
+    background: #80CBC4;
+}
+
+.titlebar
+{
+    
+    padding :15px;
+    font-size: 1.5em;
+    font-weight: 500;
+    max-height: 30px;
+    min-height: 30px;
+}
+
+.userdetail
+{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.rightfloat{
+    float: right;
+}
+
+.rightfloat:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+.maincontent .titlebar
+{
+    font-size: 1.2em;
+}
+
+.content{
+    width: 100%;
+}

@@ -1,0 +1,14 @@
+
+
+.createblock{
+    width:35%;
+    margin:15px 5%;
+    border: 1px solid #80CBC4;
+    border-radius:5px;
+    font-family: inherit;
+    font-size: 1.4em;
+    padding:25px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
