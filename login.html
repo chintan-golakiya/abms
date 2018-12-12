@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>ABMS</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/colors.css">
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+
+    </head>
+    <body class="background_300">
+        <div class="color_900 title">
+            ABMS
+        </div>
+        <form>
+            <div class="form color_500">
+                <input type="text" class="field" placeholder="Username" id="username" required>
+                <input type="password" class="field" placeholder="Password" id="password" required>
+                <input type="submit" class="btn" value="Login">
+            </div>
+        </form>
+
+        <script type="text/javascript">
+            const electron = require('electron');
+            const {ipcRenderer} = electron;
+    
+            const mysql = require('mysql');
+            const config = require('./config.js');
+    
+            const form = document.querySelector('form');
+            form.addEventListener('submit',submitForm);
+    
+            function submitForm(e)
+            {
+                e.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                if(username.length==0)
+                {
+                    alert('Enter Username');
+                    return;
+                }
+                else if(password.length==0)
+                {
+                    alert('Enter Password');
+                    return;
+                }
+                var con = config.getdb();
+                con.connect(function(err){
+                    if(err)
+                    {
+                        alert('Error in Connection with database');
+                    }
+                    else{
+                        console.log('database connected');
+                        var sql = "select * from user where username = '"+username+"' and password = '"+password+"'";
+                        con.query(sql,function(err,rows,cols){
+                            if(err)
+                            {
+                                alert('Error in Query');
+                            }
+                            else{
+                                if(rows.length>0)
+                                {
+                                    ipcRenderer.send('logged:user',rows[0]);
+                                    window.location.href='homepage.html';
+                                }
+                                else
+                                alert('Invalid Details');
+                            }
+                        });
+                    }
+    
+    
+                });
+                
+    
+            }
+            
+            
+            
+        </script>
+    </body>
+</html>

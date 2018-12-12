@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>ABMS</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+        <link rel="stylesheet" type="text/css" href="css/colors.css">
+        <link rel="stylesheet" type="text/css" href="css/create.css">
+        <script src="js/basic.js"></script>
+    </head>
+    <body>
+        <div class="sidebar background_dark color_200">
+            <div class="titlebar">
+                ABMS
+            </div>
+            <div class="sidemenu">
+                <div class="userdetail">
+                <img src="images/company-logo.png" width="140" height="140">
+                <br>
+                Shree Sai Enterprice    
+                </div>
+                <div class="menu" onclick="hyper_link('homepage.html');">
+                    Dashboard
+                </div>
+                <div class="menu activemenu" >
+                    Create new
+                </div>
+                <div class="menu">
+                    Purchases
+                </div>
+                <div class="menu">
+                    Sells
+                </div>
+                <div class="menu">
+                    Reports
+                </div>
+
+            </div>
+        </div>
+        <div class="maincontent">
+            <div class="titlebar background_200 color_700">
+            <div class="rightfloat">
+                    <span onclick="logout()" style="cursor:pointer;"><img src="images/logout-32.png"></span>
+                </div>
+                Create New
+            </div>
+            <div class="content background_100 color_500">
+                <br>
+                <br>
+                <div class="createblock background_orange_400 color_orange_900" onclick="hyper_link('newcontact.html');">
+                    Create New Contact
+                </div>
+                <div class="createblock background_green_500 color_green_900">
+                    Add New Item
+                </div>
+                <div class="createblock background_indigo_400 color_indigo_900">
+                        New Purchase
+                </div>
+                <div class="createblock background_purple_400 color_purple_900">
+                        New Sell
+                </div>
+            </div>
+            </div>
+        <script>
+            const electron = require('electron');
+            const {ipcRenderer} = electron;
+        
+
+            let user;
+            ipcRenderer.send('get:user');
+
+            ipcRenderer.on('get:user',function(event,u){
+                user = u;
+                if(u==null)
+                {
+                    window.location.href='login.html';
+                }
+                console.log(user.username);
+            });
+
+            function logout(){
+                ipcRenderer.send('logout:user');
+                window.location.href='login.html';
+            }
+
+            
+        </script>
+    </body>
+
+</html>

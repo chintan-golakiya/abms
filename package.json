@@ -1,0 +1,16 @@
+{
+  "name": "abms",
+  "version": "1.0.0",
+  "description": "Accounting and Business Management System",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "electron":"^3.0.2",
+    "mysql": "^2.16.0"
+  },
+  "scripts": {
+    "start":"electron ."
+  },
+  "author": "chintan golakiya",
+  "license": "ISC"
+}

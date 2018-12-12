@@ -1,0 +1,261 @@
+<html>
+    <head>
+        <title>ABMS</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+        <link rel="stylesheet" type="text/css" href="css/colors.css">
+        <script src="js/basic.js"></script>
+    </head>
+    <body>
+        <div class="sidebar background_dark color_200">
+            <div class="titlebar">
+                ABMS
+            </div>
+            <div class="sidemenu">
+                <div class="userdetail">
+                <img src="images/company-logo.png" width="140" height="140">
+                <br>
+                Shree Sai Enterprice    
+                </div>
+                <div class="menu">
+                    Dashboard
+                </div>
+                <div class="menu" onclick="hyper_link('create.html');">
+                    Create new
+                </div>
+                <div class="menu">
+                    Purchases
+                </div>
+                <div class="menu">
+                    Sells
+                </div>
+                <div class="menu">
+                    Reports
+                </div>
+
+            </div>
+        </div>
+        <div class="maincontent">
+            <div class="titlebar background_200 color_700">
+            <div class="rightfloat">
+                    <span onclick="logout()" style="cursor:pointer;"><img src="images/logout-32.png"></span>
+                </div>
+                New Contact
+            </div>
+            <div class="content background_100 color_500">
+                <form>
+                    <div>
+                        <div>
+                            <label>Contact Name</label>
+                            <input type="text" placeholder="Firstname">
+                            <input type="text" placeholder="Lastname">
+                        </div>
+                        <div>
+                            <label>Company Name</label>
+                            <input type="text" placeholder="companyname">
+                        </div>
+                        <div>
+                            <label>Contact Display Name</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label>Contact Mobile</label>
+                            <input type="text" placeholder="Mobile no.">
+                            <input type="text" placeholder="Phone No.">
+                        </div>
+                        <div>
+                            <div>More Details</div>
+                            <div>Address</div>
+                            <div>Contact Persons</div>
+                            <div>Comments</div>
+                        </div>
+                        <div>
+                            <div>
+                                <label>GST Treatment</label>
+                                <select name="gstScheme" id="gstScheme">
+                                    <option value="regulargst">Regular GST</option>
+                                    <option value="nongst">Unregisterd GST</option>
+                                    <option value="overseas">Overseas</option>
+                                    <option value="customer">Customer</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label>GSTIN</label>
+                                <input type="text" name="gstno" id="gstno">
+                            </div>
+                            <div>
+                                <label>PAN no.</label>
+                                <input type="text" name="pan" id="pan">
+                            </div>
+                            <div>
+                                <label>State of Supply</label>
+                                <select name="state" id="state">
+                                    <option value="24">[GJ] Gujarat</option>
+                                    <option value="35">[AN] Andaman and Nicobar Islands</option>
+                                    <option value="37">[AD] Andhra Pradesh</option>
+                                    <option value="12">[AR] Arunachal Pradesh</option>
+                                    <option value="18">[AS] Assam</option>
+                                    <option value="10">[BR] Bihar</option>
+                                    <option value="04">[CH] Chandigadh</option>
+                                    <option value="22">[CG] Chattisgarh</option>
+                                    <option value="26">[DN] Dadra and Nagar Haveli</option>
+                                    <option value="25">[DD] Daman and Div</option>
+                                    <option value="07">[DL] Dehli</option>
+                                    <option value="30">[GA] Goa</option>
+                                    <option value="06">[HR] Haryana</option>
+                                    <option value="07">[HP] Himalaya Pradesh</option>
+                                    <option value="01">[JK] Jammu and Kashmir</option>
+                                    <option value="20">[JH] Jarkhand</option>
+                                    <option value="29">[KN] Karnataka</option>
+                                    <option value="32">[KL] Kerla</option>
+                                    <option value="31">[LD] Lakshdeep Islands</option>
+                                    <option value="23">[MP] Madhya Pradesh</option>
+                                    <option value="27">[MH] Maharashtra</option>
+                                    <option value="14">[MN] Manipur</option>
+                                    <option value="17">[ML] Meghalaya</option>
+                                    <option value="15">[MZ] Mizoram</option>
+                                    <option value="13">[NL] Nagaland</option>
+                                    <option value="21">[OD] Odisha</option>
+                                    <option value="34">[PY] Pondicherry</option>
+                                    <option value="03">[PB] Punjab</option>
+                                    <option value="08">[RJ] Rajasthan</option>
+                                    <option value="11">[SK] Sikkim</option>
+                                    <option value="33">[TN] Tamil Nadu</option>
+                                    <option value="36">[TS] Telangana</option>
+                                    <option value="16">[TR] Tripura</option>
+                                    <option value="09">[UP] Uttar Pradesh</option>
+                                    <option value="05">[UK] Uttarakhand</option>
+                                    <option value="19">[WB] West Bengal</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label>Default Payment Schemas</label>
+                                <select name="default_payment" id="default_payment">
+                                    <option value="10days">Net 10 Days</option>
+                                    <option value="15days">Net 15 Days</option>
+                                    <option value="30days">Net 30 Days</option>
+                                    <option value="60days">Net 60 days</option>
+                                    <option value="monthend">Due at end of month</option>
+                                    <option value="next10">Due at 10th of next month</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div>
+                                Billing Address
+                            </div>
+                            <div>
+                                <label>Title</label>
+                                <input type="text" name="addressTitle" id="addressTitle">
+                            </div>
+                            <div>
+                                <label>Street</label>
+                                <input type="text" name="street" id="street">
+                            </div>
+                            <div>
+                                <label>Area</label>
+                                <input type="text" name="area" id="area">
+                            </div>
+                            <div>
+                                <label>City</label>
+                                <input type="text" name="city" id="city">
+                            </div>
+                            <div>
+                                <label>State</label>
+                                <input type="text" name="state" id="state">
+                            </div>
+                            <div>
+                                <label>ZIP Code</label>
+                                <input type="text" name="zip" id="zip">
+                            </div>
+                            <div>
+                                <label>Phone</label>
+                                <input type="text" name="phone" id="phone">
+                            </div>
+
+                        </div>
+                        <div>
+                            <div>
+                                Delivery Address
+                            </div>
+                            <div>
+                                <label>Title</label>
+                                <input type="text" name="addressTitle" id="addressTitle">
+                            </div>
+                            <div>
+                                <label>Street</label>
+                                <input type="text" name="street" id="street">
+                            </div>
+                            <div>
+                                <label>Area</label>
+                                <input type="text" name="area" id="area">
+                            </div>
+                            <div>
+                                <label>City</label>
+                                <input type="text" name="city" id="city">
+                            </div>
+                            <div>
+                                <label>State</label>
+                                <input type="text" name="state" id="state">
+                            </div>
+                            <div>
+                                <label>ZIP Code</label>
+                                <input type="text" name="zip" id="zip">
+                            </div>
+                            <div>
+                                <label>Phone</label>
+                                <input type="text" name="phone" id="phone">
+                            </div>    
+                        </div>
+                        <div>
+                            <table>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Mobile No.</th>
+                                    <th>Email</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="firstname"></td>
+                                    <td><input type="text" name="lastname"></td>
+                                    <td><input type="text" name="mobile"></td>
+                                    <td><input type="email" name="email"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <button type="submit">Add Contact</button>
+                            <input type="button" value="cancel" onclick="hyper_link('create.html');">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        <script>
+            const electron = require('electron');
+            const {ipcRenderer} = electron;
+        
+
+            let user;
+            ipcRenderer.send('get:user');
+
+            ipcRenderer.on('get:user',function(event,u){
+                user = u;
+                if(u==null)
+                {
+                    window.location.href='login.html';
+                }
+                console.log(user.username);
+            });
+
+            function logout(){
+                ipcRenderer.send('logout:user');
+                window.location.href='login.html';
+            }
+
+            
+        </script>
+    </body>
+
+</html>
